@@ -1,15 +1,22 @@
 package com.imaginea.venkatesh.utils;
 
-import java.io.*;
-import java.net.*;
-import java.util.regex.Matcher;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 
 import org.apache.log4j.Logger;
 
-import com.imaginea.venkatesh.webcrawler.Constants;
-
 public class WebCrawlHelper {
-	public static Logger logger = Logger.getLogger(WebCrawlHelper.class);
+	private static Logger logger = Logger.getLogger(WebCrawlHelper.class);
+
+	/**
+	 * @param urlLink
+	 * @return the html text content from Given Url
+	 */
 	public static String getHtmlContent(String urlLink) {
 		StringBuffer htmlBody = new StringBuffer();
 		try {
@@ -35,18 +42,4 @@ public class WebCrawlHelper {
 		return (HttpURLConnection) url.openConnection();
 	}
 
-	public static String replaceInvalidChar(String linkElement) {
-		linkElement = linkElement.replaceAll("'", "");
-		linkElement = linkElement.replaceAll("\"", "");
-		return Constants.WEB_URL_PATH + linkElement.replace("date", "");
-	}
-
-	public static String getMonth(String link, String year) {
-		Matcher digit = Constants.DIGIT_PATTERN.matcher(link);
-		int month = 0;
-		if (digit.find()) {
-			month = Integer.parseInt(digit.group().replace(year, ""));
-		}
-		return Constants.Month.values()[month - 1].toString();
-	}
 }

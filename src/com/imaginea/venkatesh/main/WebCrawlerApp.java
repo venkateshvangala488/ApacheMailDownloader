@@ -4,7 +4,8 @@ import java.util.Scanner;
 
 import org.apache.log4j.Logger;
 
-import com.imaginea.venkatesh.service.WebCrawlerService;
+import com.imaginea.venkatesh.apachecrawler.ApacheMailDownloader;
+
 
 public class WebCrawlerApp {
 	public static void main(String args[]) {
@@ -13,7 +14,9 @@ public class WebCrawlerApp {
 		Scanner scanner = new Scanner(System.in);
 		LOGGER.info("Please Enter Year.");
 		String year = scanner.next();
-		WebCrawlerService webCrawlerService = new WebCrawlerService();
-		webCrawlerService.startCrawling(year);
+		LOGGER.info("Please Enter Folder Name.");
+		String folderName = scanner.next();
+		ApacheMailDownloader downloader = new ApacheMailDownloader();
+		downloader.StartDownload(year, folderName);
 	}
 }
