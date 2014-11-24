@@ -1,0 +1,27 @@
+Re: No compile errors with plexus-compiler-eclipse maven-users mailing list archives Site index · List index Message view « Date » · « Thread » Top « Date » · « Thread » From Peter Palmreuther <pitpa...@gmail.com> Subject Re: No compile errors with plexus-compiler-eclipse Date Sun, 02 Dec 2012 19:05:53 GMT 
+Hello Martin,
+
+Am 02.12.2012 um 15:37 schrieb Martin Gainty <mgainty@hotmail.com>:
+> I downloaded maven-eclipse-compiler version 1.9.2 from maven repo1 and was able to use
+the pom.xml to compile and package 
+> here is the pom.xml i implemented:
+> [...]
+> http://repo1.maven.org/maven2/org/codehaus/plexus/plexus-compiler-eclipse/1.9.2 does
+this not compile for your environment?
+
+Pardon?
+
+My message was not about compiling plexus-comiler-eclipse itself, but using it to compile
+my very own stuff.
+As requested by Olivier Lamy I already opened a JIRA issue about my objections, but thanks
+for your comment.
+-- 
+Best regards,
+
+Peter
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+
+ Mime Unnamed text/plain (inline, Quoted Printable, 840 bytes) View raw message

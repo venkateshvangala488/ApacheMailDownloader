@@ -1,0 +1,51 @@
+MSSQL Dependency in POM? maven-users mailing list archives Site index · List index Message view « Date » · « Thread » Top « Date » · « Thread » From jerald <jerald.mu...@yahoo.com> Subject MSSQL Dependency in POM? Date Fri, 30 Nov 2012 12:34:39 GMT 
+I'm a new Bee to Maven
+
+using Hiberanate 
+
+
+
+I tried with 
+1.   	
+		<dependency>
+		      <groupId>com.microsoft.sqlserver.jdbc</groupId>
+	     	  <artifactId>sqljdbc4</artifactId>
+    		  <version>2.0</version>
+		</dependency>	
+
+
+
+2.		<dependency>
+		      <groupId>com.microsoft.sqlserver.jdbc</groupId>
+	     	  <artifactId>sqljdbc</artifactId>
+    		  <version>2.0</version>
+		      <scope>system</scope>
+      		  <systemPath>C:\Spring Library\sqljdbc4.jar</systemPath>
+    	</dependency>
+
+
+i'm getting ERROR
+
+Some problems were encountered while building the effective model for
+com.demo:demo-app:war:1.0-SNAPSHOT
+[WARNING] 'dependencies.dependency.systemPath' for
+com.microsoft.sqlserver.jdbc:sqljdbc:jar should use a variable instead of a
+hard-coded path C:\Spring Library\sqljdbc4.jar @ line 76, column 23
+[WARNING] 
+
+
+How can i declare. 
+Please Help me OUT 
+
+
+
+--
+View this message in context: http://maven.40175.n5.nabble.com/MSSQL-Dependency-in-POM-tp5734512.html
+Sent from the Maven - Users mailing list archive at Nabble.com.
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+
+ Mime Unnamed text/plain (inline, 7-Bit, 1231 bytes) View raw message

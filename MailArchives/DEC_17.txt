@@ -1,0 +1,113 @@
+Re: problem while conversion in build maven-users mailing list archives Site index · List index Message view « Date » · « Thread » Top « Date » · « Thread » From Mikhail Kalkov <mikhail.kal...@purplescout.se> Subject Re: problem while conversion in build Date Mon, 03 Dec 2012 10:16:36 GMT 
+Hi, 
+
+I don't understand your problem and doubt many people do. What is validation.xml and how does
+it relate to validation-global.xml? Why is form-validation tag relevant? I am afraid your
+question is as cryptic as Napoleon's kremlin letter (http://www.bbc.co.uk/news/world-europe-20572136).
+If you succinctly describe how your problem can be reproduced by any mailing list subscriber,
+there is a better chance you get a helpful reply. 
+
+
+Kind regards, 
+Mikhail Kalkov 
+
+----- Original Message -----
+
+From: "Praveen Jain" <praveen.x.jain@oracle.com> 
+To: "Maven Users List" <users@maven.apache.org> 
+Sent: Monday, December 3, 2012 5:46:40 AM 
+Subject: RE: problem while conversion in build 
+
+
+
+Can u please someone tell , how can I add german characters in validation.global.xml? 
+So that it can be converted exactly in validation.xml m while building. 
+
+
+
+Thanks 
+Warm Regards, 
+Praveen Jain 
+
+Oracle
+Praveen Jain | 020-66563094 
+Prime Sourcing, Oracle Financial Services, Oracle Park, 
+Pune, India 
+
+
+
+
+From: Praveen Jain 
+Sent: Thursday, November 29, 2012 4:25 PM 
+To: Maven Users List 
+Subject: RE: problem while conversion in build 
+
+Yes I am using ISO-8859-1 
+
+
+Thanks 
+Warm Regards, 
+Praveen Jain 
+
+Oracle
+Praveen Jain | 020-66563094 
+Prime Sourcing, Oracle Financial Services, Oracle Park, 
+Pune, India 
+
+
+
+From: Martin Eisengardt [mailto:martin.eisengardt@gmail.com] 
+Sent: Thursday, November 29, 2012 4:17 PM 
+To: Maven Users List 
+Subject: Re: problem while conversion in build 
+
+
+Do you set any encoding in your pom.xml? 
+
+for example see http://maven.apache.org/plugins/maven-resources-plugin/examples/encoding.html
+
+
+
+
+
+
+On Thu, Nov 29, 2012 at 11:44 AM, Praveen Jain < praveen.x.jain@oracle.com > wrote:
+
+
+
+
+Hi 
+I am building my project using maven, 
+I have some german character in my validation-global.xml 
+When I build it they got converted to some garbage value in validation.xml. 
+
+If I add <? Xml version=1.0 encoding =”iso-8859-1”> in validation-global.xml , then
+after build german character placed as it is in validation.xml. 
+But in validation.xml after <form-validation> I have again <? Xml version=1.0 encoding
+=”iso-8859-1”> which violets the XML structure and it doesnot work. 
+
+Please assist 
+
+
+Thanks 
+Warm Regards, 
+Praveen Jain 
+
+Oracle
+Praveen Jain | 020-66563094 
+Prime Sourcing, Oracle Financial Services, Oracle Park, 
+Pune, India 
+
+
+
+
+--------------------------------------------------------------------- 
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org 
+For additional commands, e-mail: users-help@maven.apache.org 
+
+
+--------------------------------------------------------------------- 
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org 
+For additional commands, e-mail: users-help@maven.apache.org 
+
+ Mime Unnamed multipart/alternative (inline, None, 0 bytes) Unnamed text/plain (inline, Quoted Printable, 2829 bytes) Unnamed multipart/related (inline, None, 0 bytes) Unnamed text/html (inline, Quoted Printable, 13227 bytes) image001.gif (image/gif) (attachment, Base64, 893 bytes) View raw message

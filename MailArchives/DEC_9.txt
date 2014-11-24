@@ -1,0 +1,30 @@
+hi, is these any properties like ${project.module} in maven's system properties? maven-users mailing list archives Site index · List index Message view « Date » · « Thread » Top « Date » · « Thread » From a <seiyam...@163.com> Subject hi, is these any properties like ${project.module} in maven's system properties? Date Sun, 02 Dec 2012 15:21:07 GMT 
+
+I assembly a multi-module project, in the assembly, I write like the follow,
+is there any property  word like  ${project.module}  to replace "module1"?
+or can i user .properties file to set project.module1=module1?
+
+<moduleSets> 
+    <moduleSet> 
+          <useAllReactorProjects>true</useAllReactorProjects>      
+          <includes>
+              <include>${project.groupId}:module1</include>
+          </includes>
+          <binaries>
+            <outputDirectory>module1</outputDirectory>
+            <unpack>false</unpack>
+            <includeDependencies>true</includeDependencies>
+            <dependencySets>
+                <dependencySet>
+                    <outputDirectory>module1/lib</outputDirectory>
+                    <scope>runtime</scope>
+                </dependencySet>
+            </dependencySets>
+          </binaries>
+        </moduleSet> 
+
+thanks
+
+
+
+a Mime Unnamed multipart/alternative (inline, None, 0 bytes) Unnamed text/plain (inline, Base64, 1229 bytes) View raw message

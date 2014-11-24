@@ -1,0 +1,40 @@
+RE: No compile errors with plexus-compiler-eclipse maven-users mailing list archives Site index · List index Message view « Date » · « Thread » Top « Date » · « Thread » From Martin Gainty <mgai...@hotmail.com> Subject RE: No compile errors with plexus-compiler-eclipse Date Mon, 03 Dec 2012 00:33:19 GMT 
+
+
+  > Subject: Re: No compile errors with plexus-compiler-eclipse
+> From: pitpalme@gmail.com
+> Date: Sun, 2 Dec 2012 20:05:53 +0100
+> To: users@maven.apache.org
+> 
+> Hello Martin,
+> 
+> Am 02.12.2012 um 15:37 schrieb Martin Gainty <mgainty@hotmail.com>:
+> > I downloaded maven-eclipse-compiler version 1.9.2 from maven repo1 and was able
+to use the pom.xml to compile and package 
+> > here is the pom.xml i implemented:
+> > [...]
+> > http://repo1.maven.org/maven2/org/codehaus/plexus/plexus-compiler-eclipse/1.9.2
+does this not compile for your environment?
+> 
+> Pardon?
+> 
+> My message was not about compiling plexus-comiler-eclipse itself, but using it to compile
+my very own stuff.
+> As requested by Olivier Lamy I already opened a JIRA issue about my objections, but thanks
+for your comment.
+> -- 
+> Best regards,
+> 
+> Peter MG>understood..
+MG>i too work in both environments and have implemented execution scripts calling legacy
+ANT build.xml target via maven-antrun-plugin
+
+MG>pingback if you see a "maven functionality hole" that can only be filled by calling
+a taskdef'ed Java Ant class
+MG>which *should* (eventually) be ported to a fully functional maven-plugin 
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+> 
+ 		 	   		  
+ Mime Unnamed multipart/alternative (inline, None, 0 bytes) Unnamed text/plain (inline, Quoted Printable, 1431 bytes) View raw message

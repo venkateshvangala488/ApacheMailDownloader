@@ -1,0 +1,51 @@
+Re: Implementing a Maven plugin with alternate mojo/component implementations? maven-users mailing list archives Site index · List index Message view « Date » · « Thread » Top « Date » · « Thread » From "Robert Scholte" <rfscho...@apache.org> Subject Re: Implementing a Maven plugin with alternate mojo/component implementations? Date Sun, 02 Dec 2012 14:56:37 GMT 
+Here are some plugins which you should have a look at:
+maven-compiler-plugin ( compilerId )
+maven-release-plugin ( mavenExecutorId )
+
+Now you need to do some Plexus-stuff, since that's the DI-framework for  
+Maven.
+Every task-implementation needs to have the same interface (plexus role)  
+and a specific id (role-hint)
+In your manager you can let Plexus fill a map based on the plexus role.
+So now you can add a parameter to your plugin with a default taskId, and  
+users can overrule it.
+I think this meets your requirements.
+
+Good luck,
+
+Robert
+
+
+Op Sun, 02 Dec 2012 12:33:43 +0100 schreef christofer.dutz@c-ware.de  
+<christofer.dutz@c-ware.de>:
+
+> Hi,
+>
+> I am currently setting up a new Maven plugin project and am currently  
+> faced with the following problem:
+>
+> I have fefined a dafaultLifecycle which defines which mojos should  
+> generally be invoked in which phase. My problem now is that I would like  
+> to have different implementations used for performing the tasks. There  
+> should allways be a default mojo/component that is used if the user  
+> doesn't specify which implementation he wants to use, but should offer a  
+> way to tell the build to use a different implementation.
+>
+> Would it be good to have some sort of "proxy-mojo" that is allways  
+> called and then relays to an implementation component based upon the  
+> configuration, or would it be better do define completely independent  
+> Mojos?  The Internet seems to be full of tutorials on creating Maven  
+> plugins, but I haven't found a single one dealing with this particular  
+> problem.
+>
+> Help greatly appreciated,
+>     Chris
+>
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+
+ Mime Unnamed text/plain (inline, 7-Bit, 1818 bytes) View raw message

@@ -1,0 +1,48 @@
+maven-eclipse-plugin generates wrong eclipse project maven-users mailing list archives Site index · List index Message view « Date » · « Thread » Top « Date » · « Thread » From Nikolay Skachkov <nb...@yahoo.com> Subject maven-eclipse-plugin generates wrong eclipse project Date Mon, 03 Dec 2012 21:30:36 GMT 
+Hi!
+
+I have a source directory structure like below (1). 
+I have maven project that compiles uses <include> in the pom.xml and all builds OK.
+When I run mvn eclipse:eclipse in same directory I do not get a usable Eclipse project. The
+classes dir after compilation looks like (2). I suggest that in general maven-eclipse-pluging
+would like to accept any maven project that is accepted by maven.
+
+Is there anyone who can advice about it?  
+
+1)
++---gen
+|   \---com
+|       \---HybridJava
+|           \---Sample
+|                   A.java
++---src
+|   \---com
+|       \---HybridJava
+|           \---Sample
+|                   B.java
+
+2)
++---classes
+|   +---gen
+|   |   \---com
+|   |       \---HybridJava
+|   |           \---Sample
+|   |                   A.class
+|   +---src
+|   |   \---com
+|   |       \---HybridJava
+|   |           \---Sample
+|   |                   B.class
+
+Nikolay
+
+
+
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+
+ Mime Unnamed text/plain (inline, Quoted Printable, 1452 bytes) View raw message

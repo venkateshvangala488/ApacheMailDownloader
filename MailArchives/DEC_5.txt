@@ -1,0 +1,23 @@
+Implementing a Maven plugin with alternate mojo/component implementations? maven-users mailing list archives Site index · List index Message view « Date » · « Thread » Top « Date » · « Thread » From "christofer.dutz@c-ware.de" <christofer.d...@c-ware.de> Subject Implementing a Maven plugin with alternate mojo/component implementations? Date Sun, 02 Dec 2012 11:33:43 GMT 
+Hi,
+
+I am currently setting up a new Maven plugin project and am currently faced with the following
+problem:
+
+I have fefined a dafaultLifecycle which defines which mojos should generally be invoked in
+which phase. My problem now is that I would like to have different implementations used for
+performing the tasks. There should allways be a default mojo/component that is used if the
+user doesn't specify which implementation he wants to use, but should offer a way to tell
+the build to use a different implementation.
+
+Would it be good to have some sort of "proxy-mojo" that is allways called and then relays
+to an implementation component based upon the configuration, or would it be better do define
+completely independent Mojos?  The Internet seems to be full of tutorials on creating Maven
+plugins, but I haven't found a single one dealing with this particular problem.
+
+Help greatly appreciated,
+    Chris
+
+
+
+ Mime Unnamed multipart/alternative (inline, None, 0 bytes) Unnamed text/plain (inline, Quoted Printable, 935 bytes) View raw message
