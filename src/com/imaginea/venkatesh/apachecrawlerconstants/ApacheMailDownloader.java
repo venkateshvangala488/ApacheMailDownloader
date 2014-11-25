@@ -1,4 +1,4 @@
-package com.imaginea.venkatesh.apachecrawler;
+package com.imaginea.venkatesh.apachecrawlerconstants;
 
 import java.io.BufferedWriter;
 import java.io.File;
