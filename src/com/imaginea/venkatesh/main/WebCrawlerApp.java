@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 import org.apache.log4j.Logger;
 
-import com.imaginea.venkatesh.apachecrawlerconstants.ApacheMailDownloader;
+import com.imaginea.venkatesh.apachecrawler.ApacheMailDownloader;
 
 
 public class WebCrawlerApp {
