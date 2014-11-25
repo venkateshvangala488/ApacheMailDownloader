@@ -31,12 +31,14 @@ public class ApacheMailDownloader {
 	 * @param downloadYear
 	 * @param dirName
 	 * Download the mails to given Directory Name
+	 * @throws IOException 
 	 */
-	public void download(String year, String rootDir) {
+	public void download(String year, String rootDir) throws IOException {
+		WebCrawlHelper webCrawlHelper = new WebCrawlHelper();
 		final String HREF_PATTERN = "\\s*(?i)href\\s*=\\s*(\"([^\"]*" + year + "\\d{2}.mbox/date\")|'[^']*" + year + "\\d{2}.mbox/date')";
 		Pattern patternTag = Pattern.compile(Constants.TAG_PATTERN);
 		Pattern patternLink = Pattern.compile(HREF_PATTERN);
-		Matcher matcherTag = patternTag.matcher(WebCrawlHelper.getHtmlContent(Constants.WEB_URL_PATH));
+		Matcher matcherTag = patternTag.matcher(webCrawlHelper.getHtmlContent(Constants.WEB_URL_PATH));
 		List<String> links = new ArrayList<String>();
 		
 		while (matcherTag.find()) {

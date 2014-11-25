@@ -1,5 +1,6 @@
 package com.imaginea.venkatesh.main;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 import org.apache.log4j.Logger;
@@ -8,7 +9,7 @@ import com.imaginea.venkatesh.apachecrawler.ApacheMailDownloader;
 
 
 public class WebCrawlerApp {
-	public static void main(String args[]) {
+	public static void main(String args[]) throws IOException{
 		final Logger LOGGER = Logger.getLogger(WebCrawlerApp.class);
 		LOGGER.info("Main App Intialised....");
 		@SuppressWarnings("resource")
