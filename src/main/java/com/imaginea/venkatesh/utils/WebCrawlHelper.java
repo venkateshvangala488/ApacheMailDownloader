@@ -6,10 +6,11 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.Properties;
 import org.apache.log4j.Logger;
 
 public class WebCrawlHelper {
-	
+
 	private static Logger logger = Logger.getLogger(WebCrawlHelper.class);
 	/**
 	 * @param urlLink
@@ -34,5 +35,17 @@ public class WebCrawlHelper {
 			throw ie;
 		}
 		return htmlBody.toString();
+	}
+
+	/**
+	 * @param propertyFileName
+	 * @return Property Object
+	 * @throws IOException
+	 */
+	public Properties getApplicationProperties(String propertyFileName) throws IOException {
+		Properties properties = new Properties();
+		InputStream inputStream = getClass().getClassLoader().getResourceAsStream(propertyFileName);
+		properties.load(inputStream);
+		return properties;
 	}
 }
